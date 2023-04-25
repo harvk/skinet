@@ -13,6 +13,8 @@ namespace API.Extensions
         {
             services.AddScoped<IProductRepository, ProductRepository>();
 
+            services.AddScoped<IBasketRepository, BasketRepository>();
+
             // must call generic repository types this way
             services.AddScoped(typeof(IGenericRepository<>), (typeof(GenericRepository<>)));
 
